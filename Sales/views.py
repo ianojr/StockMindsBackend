@@ -5,7 +5,7 @@ from .models import Sale
 from .serializers import SaleSerializer
 
 @api_view(['GET', 'POST', 'PUT', 'DELETE'])
-def Sale_api(request, id=None):
+def SaleApi(request, id=None):
     if request.method == 'GET':
         sale = Sale.objects.all()
         serializer = SaleSerializer(sale, many=True)

@@ -5,7 +5,7 @@ from .models import Supplier
 from .serializers import SupplierSerializer
 
 @api_view(['GET', 'POST', 'PUT', 'DELETE'])
-def course_api(request, id=None):
+def SupplierApi(request, id=None):
     if request.method == 'GET':
         supplier = Supplier.objects.all()
         serializer = SupplierSerializer(supplier, many=True)
